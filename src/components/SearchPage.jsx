@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import BookCard from "../components/BookCard";
 import useDebounce from "../hooks/useDebounce";
-import ClipLoader from "react-spinners/ClipLoader";
 
 const SearchPage = () => {
   const [query, setQuery] = useState("");
@@ -71,7 +70,7 @@ const SearchPage = () => {
       />
       {loading ? (
         <div className="flex justify-center h-[80vh] items-center">
-          <ClipLoader size={50} color={"#123abc"} loading={loading} />
+          <div className="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-24 w-24"></div>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
