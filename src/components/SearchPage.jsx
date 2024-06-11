@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import BookCard from "../components/BookCard";
 import useDebounce from "../hooks/useDebounce";
-import ClipLoader from "react-spinners/ClipLoader"; // If using react-spinners
+import ClipLoader from "react-spinners/ClipLoader";
 
 const SearchPage = () => {
   const [query, setQuery] = useState("");
